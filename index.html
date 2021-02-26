@@ -5,39 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Барбершоп</title>
+
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <aside class="sidebar">
-          <ul>
-            <li>
-              <a href="#" class="logo">
-                <svg width="69" height="55">
-                  <use href="./images/sprite.svg#icon-Logo"></use>
-                </svg>
-              </a>
-            </li>
-            <li><a href="#">Youtube</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </aside>
+      <div class="container">
+        <nav>
+          <aside class="sidebar">
+            <ul>
+              <li>
+                <a href="#" class="logo">
+                  <svg width="69" height="55">
+                    <use href="./images/sprite.svg#icon-Logo"></use>
+                  </svg>
+                </a>
+              </li>
+              <li><a href="#">Youtube</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </aside>
 
-        <ul class="nav-menu">
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">О нас</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Услуги и цены</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Мастера</a>
-          </li>
-          <li class="nav-menu__item">
-            <a href="#" class="nav-menu__link">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+          <ul class="nav-menu">
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">О нас</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">Услуги и цены</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">Мастера</a>
+            </li>
+            <li class="nav-menu__item">
+              <a href="#" class="nav-menu__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
       <a href="tel:+380441111111" class="tel">+38 044 111 11 11</a>
       <button class="button" type="button">онлайн-запись</button>
     </header>
@@ -51,102 +56,108 @@
         </p>
       </section>
       <section class="about">
-        <ul>
-          <li>
-            <img
-              src="./images/desktop/shaving.jpg"
-              alt="Процесс нанесения пены для бритья помазком"
-              width="270"
-            />
-          </li>
-          <li>
-            <img
-              src="./images/desktop/razor-cut.jpg"
-              alt="Процесс бритья лезвием затылка"
-            />
-          </li>
-        </ul>
-        <h2 class="subtitle">О НАС</h2>
-        <h3 class="section-title">Лучший Барбершоп твоего города</h3>
-        <p class="hero__text">
-          Если ты хочешь добавить в свой образ больше уверенности – тебе точно к
-          нам.
-        </p>
-        <p>
-          Мы команда, которая никогда не останавливается на достигнутом и жаждет
-          перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не
-          сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной
-          волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам
-          приходит!
-        </p>
-        <button class="button" type="button">онлайн-запись</button>
+        <div class="container">
+          <ul>
+            <li>
+              <img
+                src="./images/desktop/shaving.jpg"
+                alt="Процесс нанесения пены для бритья помазком"
+                width="270"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/desktop/razor-cut.jpg"
+                alt="Процесс бритья лезвием затылка"
+              />
+            </li>
+          </ul>
+          <h2 class="subtitle">О НАС</h2>
+          <h3 class="section-title">Лучший Барбершоп твоего города</h3>
+          <p class="hero__text">
+            Если ты хочешь добавить в свой образ больше уверенности – тебе точно
+            к нам.
+          </p>
+          <p>
+            Мы команда, которая никогда не останавливается на достигнутом и
+            жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
+            никогда не сможешь быть прежним. Мы команда, которая всегда с
+            клиентами "на одной волне". Поэтому, мы всегда готовы
+            усовершенствовать каждого, кто к нам приходит!
+          </p>
+          <button class="button" type="button">онлайн-запись</button>
+        </div>
       </section>
       <section class="price">
-        <h2 class="subtitle">Проведи время в компании лучших мастеров</h2>
-        <h3 class="section-title">Услуги и цены</h3>
-        <ul>
-          <li>
-            <p>Мужская стрижка</p>
-            <p>от 300 грн.</p>
-          </li>
-          <li>
-            <p>Стрижка бороды</p>
-            <p>от 200 грн.</p>
-          </li>
-          <li>
-            <p>Стрижка усов</p>
-            <p>от 200 грн.</p>
-          </li>
-          <li>
-            <p>Бритье опасной бритвой</p>
-            <p>от 200 грн.</p>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <p>Cтрижка у стажера</p>
-            <p>от 50 грн.</p>
-          </li>
-          <li>
-            <p>Стрижка под насадку</p>
-            <p>от 200 грн.</p>
-          </li>
-          <li>
-            <p>Детская стрижка (до 12 лет)</p>
-            <p>от 300 грн.</p>
-          </li>
-          <li>
-            <p>Камуфлирование седины</p>
-            <p>от 200 грн.</p>
-          </li>
-        </ul>
-        <button class="button" type="button">онлайн-запись</button>
+        <div class="container">
+          <h2 class="subtitle">Проведи время в компании лучших мастеров</h2>
+          <h3 class="section-title">Услуги и цены</h3>
+          <ul>
+            <li>
+              <p>Мужская стрижка</p>
+              <p>от 300 грн.</p>
+            </li>
+            <li>
+              <p>Стрижка бороды</p>
+              <p>от 200 грн.</p>
+            </li>
+            <li>
+              <p>Стрижка усов</p>
+              <p>от 200 грн.</p>
+            </li>
+            <li>
+              <p>Бритье опасной бритвой</p>
+              <p>от 200 грн.</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p>Cтрижка у стажера</p>
+              <p>от 50 грн.</p>
+            </li>
+            <li>
+              <p>Стрижка под насадку</p>
+              <p>от 200 грн.</p>
+            </li>
+            <li>
+              <p>Детская стрижка (до 12 лет)</p>
+              <p>от 300 грн.</p>
+            </li>
+            <li>
+              <p>Камуфлирование седины</p>
+              <p>от 200 грн.</p>
+            </li>
+          </ul>
+          <button class="button" type="button">онлайн-запись</button>
+        </div>
       </section>
       <section class="features">
-        <ul>
-          <li>
-            <p>600</p>
-            <p>Довольных клиентов в день</p>
-          </li>
-          <li>
-            <p>20</p>
-            <p>Лучших мастеров Киева</p>
-          </li>
-          <li>
-            <p>50</p>
-            <p>Наград за отличный сервис</p>
-          </li>
-          <li>
-            <p>100</p>
-            <p>Подарков постоянным клиентам</p>
-          </li>
-        </ul>
-        <h2 class="subtitle">старая традиционная школа</h2>
-        <h3 class="section-title">Почему приходят именно к нам?</h3>
-        <p>
-          О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать,
-          чем 10 раз прочитать.
-        </p>
+        <div class="div">
+          <ul>
+            <li>
+              <p>600</p>
+              <p>Довольных клиентов в день</p>
+            </li>
+            <li>
+              <p>20</p>
+              <p>Лучших мастеров Киева</p>
+            </li>
+            <li>
+              <p>50</p>
+              <p>Наград за отличный сервис</p>
+            </li>
+            <li>
+              <p>100</p>
+              <p>Подарков постоянным клиентам</p>
+            </li>
+          </ul>
+          <h2 class="subtitle">старая традиционная школа</h2>
+          <h3 class="section-title">Почему приходят именно к нам?</h3>
+          <p>
+            О нас говорят только хорошее. Но лучше 1 раз увидеть и
+            прочувствовать, чем 10 раз прочитать.
+          </p>
+        </div>
       </section>
       <section class="team">
         <h2 class="subtitle">для настоящих ценителей атмосферы</h2>
