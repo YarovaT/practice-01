@@ -1,0 +1,41 @@
+.site-nav {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  //   color: #ffffff;
+}
+
+.menu-list {
+  display: flex;
+}
+
+.menu-item {
+  margin-right: 40px;
+
+  :last-child {
+    margin-right: 0;
+  }
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: $accent-color;
+}
+
+.contact-link {
+  margin-right: 40px;
+  text-transform: uppercase;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: $accent-color;
+}

@@ -6,9 +6,19 @@
 
 @import "./common/base";
 
-// @import "./utils/fonts";
-// @import "./utils/breakpoints";
+@import "./utils/breakpoints";
+
 // @import "./utils/placeholders";
 // @import "./utils/mixins";
 
 @import "./common/reset";
+
+@import "./common/container";
+
+@import "./components/sidebar";
+
+@import "./components/navigation";
+
+@import "./components/buttons";
+
+@import "./components/hero-section";

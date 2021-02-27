@@ -1,0 +1,31 @@
+.sidebar {
+  outline: 1px solid red;
+  width: 10%;
+  margin-top: 32px;
+  padding-right: 30px;
+
+  height: 680px;
+
+  font-weight: $secondary-font_weight;
+  font-size: $label-text_size;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: $title-color;
+  background-color: $primary-color;
+}
+
+.sidebar-list {
+  outline: 1px solid green;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+
+  align-items: center;
+  height: 100%;
+}
+
+.social-link {
+  transform: rotate(-90deg);
+}

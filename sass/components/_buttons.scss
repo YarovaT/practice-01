@@ -1,0 +1,13 @@
+.button {
+  width: 160px;
+  height: 40px;
+  border: 1px solid $accent-color;
+  border-radius: 25px;
+  background-color: transparent;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: inherit;
+  cursor: pointer;
+}
