@@ -8,6 +8,12 @@
   line-height: inherit;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: inherit;
+  color: $title-color;
   cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: $accent-color;
+  color: $primary-color;
 }

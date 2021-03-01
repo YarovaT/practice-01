@@ -456,13 +456,80 @@ textarea {
   line-height: inherit;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: inherit;
+  color: #303030;
   cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #ff6c00;
+  color: #ffffff;
 }
 
 .hero-content {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.about-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-item {
+  margin-right: 30px;
+}
+
+.about-text {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+.about-info {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 42px;
+  line-height: 1.17;
+  color: #303030;
+}
+
+.label {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.label ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("/images/line.svg");
+  background-repeat: no-repeat;
+}
+
+.section-label {
+  margin-bottom: 20px;
+  color: #303030;
 }
 /*# sourceMappingURL=main.css.map */

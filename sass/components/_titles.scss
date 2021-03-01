@@ -1,0 +1,47 @@
+.title {
+  font-family: $title-font-stack;
+
+  font-weight: $title-font_weight;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+
+  color: $primary-color;
+}
+
+.section-title {
+  margin-bottom: 20px;
+
+  font-size: $title-text_size;
+  line-height: 1.17;
+
+  color: $title-color;
+}
+
+.label {
+  position: relative;
+  font-family: $font-stack;
+
+  font-weight: $secondary-font_weight;
+  font-size: $label-text_size;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: $label-color;
+
+  ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("/images/line.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.section-label {
+  margin-bottom: 20px;
+
+  color: $title-color;
+}
