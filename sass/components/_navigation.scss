@@ -1,27 +1,63 @@
 .site-nav {
   margin-top: 32px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-grow: 1;
 
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: $secondary-font_weight;
+  font-size: $secondary-text_size;
   line-height: 1.33;
   letter-spacing: 0.1em;
 
   //   color: #ffffff;
 }
 
+.menu-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 70%;
+  min-height: 100vh;
+  height: 100%;
+
+  padding-top: 118px;
+  padding-left: 40px;
+  padding-right: 31px;
+
+  background-color: $primary-color;
+  box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.04), -2px 0px 4px rgba(0, 0, 0, 0.08),
+    -1px 0px 3px rgba(0, 0, 0, 0.16);
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  &.is-open {
+    display: block;
+    z-index: 1;
+  }
+}
+
 .menu-list {
-  display: flex;
+  margin-bottom: 64px;
 }
 
 .menu-item {
-  margin-right: 40px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.39;
 
-  :last-child {
-    margin-right: 0;
+  color: $title-color;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 40px;
+
+    :last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -30,12 +66,19 @@
   color: $accent-color;
 }
 
-.contact-link {
-  margin-right: 40px;
-  text-transform: uppercase;
+.contacts {
+  margin-bottom: 64px;
 }
 
-.contact-link:hover,
-.contact-link:focus {
-  color: $accent-color;
+.contact-link {
+  font-size: 18px;
+  line-height: 1.39;
+  text-transform: uppercase;
+
+  color: $title-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }

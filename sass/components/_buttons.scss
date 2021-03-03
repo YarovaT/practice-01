@@ -1,19 +1,55 @@
 .button {
-  width: 160px;
+  display: block;
+  width: 194px;
   height: 40px;
   border: 1px solid $accent-color;
   border-radius: 25px;
   background-color: transparent;
-  font-weight: inherit;
-  line-height: inherit;
+  font-weight: 600;
+  line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: $title-color;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-color;
+  }
 }
 
-.button:hover,
-.button:focus {
-  background-color: $accent-color;
-  color: $primary-color;
+.contacts .button {
+  margin-top: 24px;
+}
+
+.menu-button {
+  padding: 11px 8px;
+  border: none;
+  fill: currentColor;
+  background-color: #000000;
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+  z-index: 3;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
 }

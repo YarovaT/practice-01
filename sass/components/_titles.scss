@@ -29,15 +29,17 @@
   text-transform: uppercase;
 
   color: $label-color;
+}
 
-  ::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("/images/line.svg");
-    background-repeat: no-repeat;
-  }
+.label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80px;
+  width: 60px;
+  height: 1px;
+  background-image: url("/images/line.svg");
+  background-repeat: no-repeat;
 }
 
 .section-label {

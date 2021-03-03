@@ -1,0 +1,16 @@
+.team-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 3 - 2 * 30px);
+}
+
+.team-name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.39;
+
+  text-align: center;
+
+  color: $title-color;
+}

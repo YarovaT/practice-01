@@ -13,6 +13,7 @@
 
   color: $title-color;
   background-color: $primary-color;
+  display: none;
 }
 
 .sidebar-list {
@@ -24,8 +25,4 @@
 
   align-items: center;
   height: 100%;
-}
-
-.social-link {
-  transform: rotate(-90deg);
 }
