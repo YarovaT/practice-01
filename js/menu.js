@@ -168,7 +168,32 @@
 
 // console.log(fn(["html", "css", "js", "react"]));
 
-const a = b || c : b + c ? b - c;
-const a = b || c ? b + c : b - c;
+// const a = b || c : b + c ? b - c;
+// const a = b || c ? b + c : b - c;
 
-const a != b || c ? b + c : b - c;
+// const a != b || c ? b + c : b - c;
+
+// function A() {
+//   return this;
+// }
+// function B() {
+//   return this;
+// }
+
+// var a = new A();
+// var b = new B();
+// console.log(a == b);
+
+// var a = 1;
+// var c = 1+++a;
+// console.log(c);
+
+// let str = "GenGenesisTech";
+
+// console.log(str.slice(3, 10), str.substr(3, 10), str.substring(3, 10));
+
+for (let i = 0; i < 10; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 0);
+}
