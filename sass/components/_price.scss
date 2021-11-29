@@ -1,0 +1,21 @@
+.price-section {
+  background: #111319;
+  background-image: url("../../images/mobile/section-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 84px 16px;
+  &__box {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .price-section {
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2)),
+      url("../../images/mobile/section-bg@2x.png");
+  }
+}

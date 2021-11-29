@@ -1,49 +1,47 @@
-.title {
-  font-family: $title-font-stack;
+// Titles of sections
 
-  font-weight: $title-font_weight;
-  font-size: 72px;
-  line-height: 1.18;
+.title {
+  margin-top: 20px;
+  font-family: $title-font-stack;
   letter-spacing: 0.05em;
 
-  color: $primary-color;
+  &__section {
+    font-size: 28px;
+    line-height: 1.18;
+    color: #303030;
+  }
+  &__hero-section {
+    font-size: 48px;
+    line-height: 1.33;
+    color: #ffffff;
+  }
+  &__price-section {
+    font-size: 42px;
+    line-height: 1.17;
+    color: #ffffff;
+  }
 }
 
-.section-title {
-  margin-bottom: 20px;
-
-  font-size: $title-text_size;
-  line-height: 1.17;
-
-  color: $title-color;
-}
-
-.label {
-  position: relative;
-  font-family: $font-stack;
-
+.subTitle {
+  margin-left: 20px;
   font-weight: $secondary-font_weight;
   font-size: $label-text_size;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
   color: $label-color;
 }
 
-.label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -80px;
-  width: 60px;
-  height: 1px;
-  background-image: url("/images/line.svg");
-  background-repeat: no-repeat;
+.section-label {
+  color: $title-color;
 }
 
-.section-label {
-  margin-bottom: 20px;
-
-  color: $title-color;
+.content-text {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.62;
+  color: #9da4bd;
+  &__about {
+    color: #555555;
+  }
 }

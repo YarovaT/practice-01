@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! modern-normalize v0.6.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -300,7 +301,12 @@ summary {
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* Выставляем основные настройки по-умолчанию для body */
 body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  position: relative;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 1.86;
@@ -308,7 +314,44 @@ body {
   color: #555555;
 }
 
-p {
+header {
+  position: relative;
+}
+
+hr {
+  height: 1px;
+  border-color: rgba(157, 164, 189, 0.6);
+}
+
+section {
+  margin-top: 84px;
+}
+
+.content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+hr {
   margin: 0;
 }
 
@@ -317,21 +360,29 @@ a {
   color: currentColor;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
   list-style: none;
-}
-
-h1,
-h2,
-h3 {
-  margin-top: 0;
 }
 
 textarea {
   resize: none;
   outline: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 .container {
@@ -393,8 +444,12 @@ textarea {
   height: 100%;
 }
 
+.logo {
+  z-index: 1;
+}
+
 .site-nav {
-  margin-top: 32px;
+  padding-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -411,9 +466,6 @@ textarea {
 }
 
 .menu-container {
-  position: absolute;
-  top: 0;
-  right: 0;
   width: 70%;
   min-height: 100vh;
   height: 100%;
@@ -478,6 +530,7 @@ textarea {
 }
 
 .button {
+  margin-top: 40px;
   display: block;
   width: 194px;
   height: 40px;
@@ -505,7 +558,7 @@ textarea {
   padding: 11px 8px;
   border: none;
   fill: currentColor;
-  background-color: #000000;
+  background-color: transparent;
   cursor: pointer;
   z-index: 2;
 }
@@ -533,51 +586,54 @@ textarea {
   display: none;
 }
 
+.hero-section {
+  margin-top: 0;
+  min-height: 80vh;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.2))), url("../../images/mobile/slider_1.jpg");
+  background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2)), url("../../images/mobile/slider_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.2))), url("../../images/mobile/slider_1@2x.jpg");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2)), url("../../images/mobile/slider_1@2x.jpg");
+  }
+}
+
 .hero-content {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.about-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.about-item {
-  margin-right: 30px;
-}
-
-.about-text {
-  margin-bottom: 20px;
-  font-size: 18px;
-  line-height: 1.67;
-}
-
-.about-info {
-  margin-bottom: 40px;
+  margin-top: 208px;
+  max-width: 73%;
 }
 
 .title {
+  margin-top: 20px;
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 1.18;
   letter-spacing: 0.05em;
-  color: #ffffff;
 }
 
-.section-title {
-  margin-bottom: 20px;
-  font-size: 42px;
-  line-height: 1.17;
+.title__section {
+  font-size: 28px;
+  line-height: 1.18;
   color: #303030;
 }
 
-.label {
-  position: relative;
-  font-family: "Open Sans", sans-serif;
+.title__hero-section {
+  font-size: 48px;
+  line-height: 1.33;
+  color: #ffffff;
+}
+
+.title__price-section {
+  font-size: 42px;
+  line-height: 1.17;
+  color: #ffffff;
+}
+
+.subTitle {
+  margin-left: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -586,20 +642,19 @@ textarea {
   color: rgba(157, 164, 189, 0.6);
 }
 
-.label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -80px;
-  width: 60px;
-  height: 1px;
-  background-image: url("/images/line.svg");
-  background-repeat: no-repeat;
+.section-label {
+  color: #303030;
 }
 
-.section-label {
-  margin-bottom: 20px;
-  color: #303030;
+.content-text {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.62;
+  color: #9da4bd;
+}
+
+.content-text__about {
+  color: #555555;
 }
 
 .team-cards {
@@ -621,5 +676,28 @@ textarea {
   line-height: 1.39;
   text-align: center;
   color: #303030;
+}
+
+.price-section {
+  background: #111319;
+  background-image: url("../../images/mobile/section-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 84px 16px;
+}
+
+.price-section__box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 200px 200px;
+      grid-template-columns: 200px 200px 200px;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .price-section {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.2))), url("../../images/mobile/section-bg@2x.png");
+    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2)), url("../../images/mobile/section-bg@2x.png");
+  }
 }
 /*# sourceMappingURL=main.css.map */

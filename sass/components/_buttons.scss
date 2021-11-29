@@ -1,4 +1,5 @@
 .button {
+  margin-top: 40px;
   display: block;
   width: 194px;
   height: 40px;
@@ -27,7 +28,7 @@
   padding: 11px 8px;
   border: none;
   fill: currentColor;
-  background-color: #000000;
+  background-color: transparent;
   cursor: pointer;
   z-index: 2;
 

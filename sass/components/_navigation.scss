@@ -1,5 +1,12 @@
+// Logo
+
+.logo {
+  z-index: 1;
+}
+
 .site-nav {
-  margin-top: 32px;
+  padding-top: 40px;
+  // margin-top: 32px;
 
   display: flex;
   align-items: center;
@@ -14,9 +21,9 @@
 }
 
 .menu-container {
-  position: absolute;
-  top: 0;
-  right: 0;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
 
   width: 70%;
   min-height: 100vh;
