@@ -1,0 +1,35 @@
+.features__text {
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+.features__item {
+  width: 193px;
+  height: 133px;
+  background: #f7f7f7;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+
+  color: #303030;
+
+  &-box {
+    position: relative;
+  }
+
+  &-count {
+    font-weight: bold;
+    font-size: 42px;
+    letter-spacing: 0.05em;
+  }
+
+  &-plus {
+    position: absolute;
+    top: 5%;
+    right: 25%;
+    font-size: 16px;
+    line-height: 1.38;
+    color: #ff6c00;
+  }
+}

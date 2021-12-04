@@ -1,5 +1,5 @@
 .button {
-  margin-top: 40px;
+  margin: 0 auto;
   display: block;
   width: 194px;
   height: 40px;
@@ -17,6 +17,15 @@
   &:focus {
     background-color: $accent-color;
     color: $primary-color;
+  }
+
+  &__appointment {
+    margin-top: 50px;
+    color: #ffffff;
+  }
+  &__content {
+    margin-left: 0;
+    margin-top: 40px;
   }
 }
 

@@ -18,8 +18,11 @@ header {
 }
 
 hr {
-  height: 1px;
-  border-color: rgba(157, 164, 189, 0.6);
+  border: 1px solid rgba(157, 164, 189, 0.6);
+  z-index: 1;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 
 section {
