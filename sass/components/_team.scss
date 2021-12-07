@@ -1,16 +1,55 @@
-.team-cards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(100% / 3 - 2 * 30px);
+.team {
+  background: #f7f7f7;
+  padding: 84px 31px;
+  &__card {
+    margin-bottom: 67px;
+
+    min-height: 502px;
+    text-align: center;
+    align-items: center;
+    &-box {
+      margin-top: 30px;
+    }
+    &-text {
+      padding-top: 8px;
+      color: #ff6c00;
+    }
+  }
 }
 
-.team-name {
+.team-cards {
+  min-width: 418px;
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // width: calc(100% / 3 - 2 * 30px);
+}
+
+.team__name {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.39;
-
   text-align: center;
-
   color: $title-color;
+}
+
+.social__links {
+  margin-top: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-item {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

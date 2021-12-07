@@ -678,7 +678,43 @@ select {
   color: #555555;
 }
 
+.team {
+  background: #f7f7f7;
+  padding: 84px 31px;
+}
+
+.team__card {
+  margin-bottom: 67px;
+  min-height: 502px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.team__card-box {
+  margin-top: 30px;
+}
+
+.team__card-text {
+  padding-top: 8px;
+  color: #ff6c00;
+}
+
 .team-cards {
+  min-width: 418px;
+}
+
+.team__name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  color: #303030;
+}
+
+.social__links {
+  margin-top: 27px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -688,15 +724,27 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: calc(100% / 3 - 2 * 30px);
 }
 
-.team-name {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.39;
-  text-align: center;
-  color: #303030;
+.social__links-item {
+  width: 44px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.social__links-item:last-child {
+  margin-right: 0;
 }
 
 .price-section {
@@ -742,13 +790,28 @@ select {
   }
 }
 
+.features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .features__text {
+  margin-bottom: 44px;
   font-size: 18px;
   line-height: 1.67;
 }
 
 .features__item {
-  width: 193px;
+  -ms-flex-preferred-size: calc(100% / 2 - 30px);
+      flex-basis: calc(100% / 2 - 30px);
+  margin: 0 30px 30px 0;
+  min-width: 193px;
   height: 133px;
   background: #f7f7f7;
   font-weight: 600;
@@ -756,6 +819,13 @@ select {
   line-height: 1.36;
   text-align: center;
   color: #303030;
+}
+
+.features__item:nth-child(2n) {
+  margin-right: 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
 .features__item-box {
