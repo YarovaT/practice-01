@@ -1,0 +1,19 @@
+.social-links {
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
+}
+
+.social-link {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  & a {
+    margin-left: 40px;
+    &:hover,
+    &:focus {
+      color: #ff6c00;
+    }
+  }
+}

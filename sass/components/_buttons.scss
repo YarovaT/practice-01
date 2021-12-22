@@ -41,9 +41,14 @@
   cursor: pointer;
   z-index: 2;
 
+  // position: absolute;
+  // top: 8px;
+  // right: 8px;
+  // padding: 0;
+
   &:hover,
   &:focus {
-    fill: $accent-color;
+    outline: none;
   }
 
   @media screen and (min-width: $tablet) {
@@ -61,5 +66,9 @@
 }
 
 .menu-button.is-open .icon-menu {
+  // position: absolute;
+  // top: 8px;
+  // right: 8px;
+  // padding: 0;
   display: none;
 }
