@@ -47,16 +47,15 @@
   color: #303030;
 }
 
-// .section-label {
-//   color: $title-color;
-// }
-
 .content-text {
   margin-top: 20px;
-  font-size: 16px;
   line-height: 1.62;
   color: #9da4bd;
-  &__about {
+  &__base {
     color: #555555;
+  }
+  &__small {
+    font-size: 14px;
+    line-height: 1.86;
   }
 }

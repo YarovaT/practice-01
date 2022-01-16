@@ -376,7 +376,7 @@ textarea {
 
 /* Упрощаем работу с изображениями */
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -393,8 +393,6 @@ body {
   height: 100%;
   width: 100%;
   font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -437,10 +435,8 @@ h6 {
 
 /*--------------------*/
 .container {
-  max-width: 448px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 480px;
+  padding: 0 31px;
 }
 
 @media screen and (min-width: 768px) {
@@ -596,12 +592,13 @@ h6 {
 .button {
   margin: 0 auto;
   display: block;
-  width: 194px;
+  width: 160px;
   height: 40px;
   border: 1px solid #ff6c00;
   border-radius: 25px;
   background-color: transparent;
   font-weight: 600;
+  font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -685,6 +682,7 @@ h6 {
 .title {
   margin-top: 20px;
   font-family: "Raleway", sans-serif;
+  font-weight: 700;
   letter-spacing: 0.05em;
 }
 
@@ -733,13 +731,17 @@ h6 {
 
 .content-text {
   margin-top: 20px;
-  font-size: 16px;
   line-height: 1.62;
   color: #9da4bd;
 }
 
-.content-text__about {
+.content-text__base {
   color: #555555;
+}
+
+.content-text__small {
+  font-size: 14px;
+  line-height: 1.86;
 }
 
 .team {
@@ -812,18 +814,16 @@ h6 {
 }
 
 .price-section {
-  background: #111319;
+  background-color: #111319;
   background-image: url("../../images/mobile/section-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 84px 16px;
+  padding: 84px 0;
 }
 
 .price-section__box {
   margin-top: 44px;
-  width: 418px;
-  padding: 30px;
   background: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
   background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
@@ -857,11 +857,14 @@ h6 {
   color: #303030;
 }
 
-.line {
-  display: inline-block;
+.line::before {
+  content: "";
+  top: 0;
+  left: 0;
   border-bottom: 1px solid rgba(157, 164, 189, 0.12);
   margin: 0 6px;
-  min-width: 20%;
+  width: 100%;
+  height: 100%;
 }
 
 .features__list {
@@ -942,9 +945,24 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.social__links-link:hover, .social__links-link:focus {
+.social__links-item-link:hover, .social__links-item-link:focus {
   color: #ff6c00;
+}
+
+.portfolio__cards {
+  margin-top: 44px;
+}
+
+.portfolio__cards li {
+  margin-bottom: 30px;
+}
+
+.portfolio__cards li:last-child {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */
