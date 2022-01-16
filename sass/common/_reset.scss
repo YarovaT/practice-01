@@ -1,32 +1,26 @@
-/* Убираем внешние отступы */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd,
-hr {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: currentColor;
-}
-
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul,
-ol {
-  list-style: none;
+/* Убираем внешние и внутренние отступы */
+* {
   padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* Убираем дефолтные стили для ссылок */
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
 }
 
 textarea {
@@ -36,14 +30,62 @@ textarea {
 
 /* Упрощаем работу с изображениями */
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 
+// img{vertical-align: top;}
+
+/*Обнуление*/
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
 /* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
-textarea,
-select {
-  font: inherit;
+textarea {
+  font-family: inherit;
 }
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*--------------------*/

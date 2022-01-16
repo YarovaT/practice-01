@@ -4,7 +4,6 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-
   position: relative;
   font-family: $font-stack;
   font-size: 14px;
@@ -18,11 +17,10 @@ header {
 }
 
 hr {
-  border: 1px solid rgba(157, 164, 189, 0.6);
-  z-index: 1;
-  border-top: none;
-  border-right: none;
-  border-left: none;
+  border: none; /* Убираем границу */
+  background-color: rgba(157, 164, 189, 0.6); /* Цвет линии */
+  color: rgba(157, 164, 189, 0.6); /* Цвет линии для IE6-7 */
+  height: 1px; /* Толщина линии */
 }
 
 section {

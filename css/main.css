@@ -319,11 +319,14 @@ header {
 }
 
 hr {
-  border: 1px solid rgba(157, 164, 189, 0.6);
-  z-index: 1;
-  border-top: none;
-  border-right: none;
-  border-left: none;
+  border: none;
+  /* Убираем границу */
+  background-color: rgba(157, 164, 189, 0.6);
+  /* Цвет линии */
+  color: rgba(157, 164, 189, 0.6);
+  /* Цвет линии для IE6-7 */
+  height: 1px;
+  /* Толщина линии */
 }
 
 section {
@@ -339,35 +342,31 @@ section {
           align-items: center;
 }
 
-/* Убираем внешние отступы */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd,
-hr {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: currentColor;
-}
-
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul,
-ol {
-  list-style: none;
+/* Убираем внешние и внутренние отступы */
+* {
   padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* Убираем дефолтные стили для ссылок */
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 textarea {
@@ -381,14 +380,62 @@ img {
   display: block;
 }
 
+/*Обнуление*/
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 /* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
-textarea,
-select {
-  font: inherit;
+textarea {
+  font-family: inherit;
 }
 
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
 .container {
   max-width: 448px;
   margin: 0 auto;
@@ -782,12 +829,6 @@ select {
 }
 
 .price-section__list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
   margin-bottom: 20px;
 }
 
@@ -800,11 +841,27 @@ select {
   color: #9da4bd;
 }
 
+.price-section__list-item p {
+  max-height: 30px;
+}
+
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .price-section {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.2))), url("../../images/mobile/section-bg@2x.png");
     background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2)), url("../../images/mobile/section-bg@2x.png");
   }
+}
+
+.about-content hr {
+  background-color: #303030;
+  color: #303030;
+}
+
+.line {
+  display: inline-block;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.12);
+  margin: 0 6px;
+  min-width: 20%;
 }
 
 .features__list {
@@ -864,15 +921,21 @@ select {
   color: #ff6c00;
 }
 
-.social-links {
+.features hr,
+.team hr,
+.portfolio hr {
+  background-color: #303030;
+  color: #303030;
+}
+
+.social__links {
   font-size: 14px;
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
 }
 
-.social-link {
-  margin-bottom: 24px;
+.social__links-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -881,11 +944,7 @@ select {
           align-items: center;
 }
 
-.social-link a {
-  margin-left: 40px;
-}
-
-.social-link a:hover, .social-link a:focus {
+.social__links-link:hover, .social__links-link:focus {
   color: #ff6c00;
 }
 /*# sourceMappingURL=main.css.map */
