@@ -7,13 +7,11 @@
   padding: 84px 0;
   &__box {
     margin-top: 44px;
+    padding: 30px;
     background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
   }
   &__list li {
-    // display: flex;
-    // align-items: baseline;
     margin-bottom: 20px;
-
     &:last-child {
       margin-bottom: 0;
     }
@@ -21,8 +19,25 @@
   &__list-item {
     line-height: 2.14;
     color: #9da4bd;
-    & p {
-      max-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    // align-items: flex-end;
+    max-width: 358px;
+    margin: 0 auto;
+    .type {
+      flex-shrink: 0;
+    }
+    .price {
+      order: 1;
+      flex-shrink: 0;
+    }
+    &::after {
+      content: " ";
+      height: 1px;
+      background-color: rgba(157, 164, 189, 0.12);
+      flex-grow: 1;
+      margin: 0 6px;
     }
   }
 }
@@ -39,28 +54,4 @@
 .about-content hr {
   background-color: #303030;
   color: #303030;
-}
-
-.line {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-}
-.line span {
-  background-color: #ffffff;
-  position: relative;
-  z-index: 1;
-  padding: 0px 25px;
-}
-.line:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #262626;
-  position: absolute;
-  top: 50%;
-  margin-top: -1px;
-  z-index: 0;
 }
