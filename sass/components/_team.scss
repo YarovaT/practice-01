@@ -1,9 +1,9 @@
 .team {
+  padding: 84px 0;
   background: #f7f7f7;
-  padding: 84px 31px;
+
   &__card {
     margin-bottom: 67px;
-
     min-height: 502px;
     text-align: center;
     align-items: center;
@@ -13,6 +13,9 @@
     &-text {
       padding-top: 8px;
       color: #ff6c00;
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -50,6 +53,15 @@
     background: #ffffff;
     &:last-child {
       margin-right: 0;
+    }
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      :hover,
+      :focus {
+        color: #ff6c00;
+      }
     }
   }
 }
