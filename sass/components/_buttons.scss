@@ -1,5 +1,5 @@
 .button {
-  margin: 0 auto;
+  // margin: 0 auto;
   display: block;
   width: 160px;
   height: 40px;
@@ -12,22 +12,21 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: $title-color;
-  cursor: pointer;
-
   &:hover,
   &:focus {
-    background-color: $accent-color;
-    color: $primary-color;
+    outline: none;
+    background: #ff6c00;
+    color: #ffffff;
   }
 
   &__appointment {
     margin-top: 50px;
     color: #ffffff;
   }
-  &__content {
-    margin-left: 0;
-    margin-top: 40px;
-  }
+  // &__content {
+  //   margin-left: 0;
+  //   margin-top: 40px;
+  // }
 }
 
 .contacts .button {

@@ -1,0 +1,24 @@
+.about {
+  line-height: 1.62;
+  &__subTitle {
+    color: #303030;
+    &:before {
+      background-color: #303030;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 1.18;
+  }
+  & p {
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+  &__button {
+    margin: 40px 0 0 0;
+  }
+}

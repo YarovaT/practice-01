@@ -16,18 +16,18 @@ header {
   position: relative;
 }
 
-hr {
-  border: none; /* Убираем границу */
-  background-color: rgba(157, 164, 189, 0.6); /* Цвет линии */
-  color: rgba(157, 164, 189, 0.6); /* Цвет линии для IE6-7 */
-  height: 1px; /* Толщина линии */
-}
+// hr {
+//   border: none; /* Убираем границу */
+//   background-color: rgba(157, 164, 189, 0.6); /* Цвет линии */
+//   color: rgba(157, 164, 189, 0.6); /* Цвет линии для IE6-7 */
+//   height: 1px; /* Толщина линии */
+// }
 
 section {
   margin-top: 84px;
 }
 
-.content-box {
-  display: flex;
-  align-items: center;
-}
+// .content-box {
+//   display: flex;
+//   align-items: center;
+// }

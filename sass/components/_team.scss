@@ -1,8 +1,9 @@
 .team {
   padding: 84px 0;
   background: #f7f7f7;
+  color: #303030;
 
-  &__card {
+  &__item {
     margin-bottom: 67px;
     min-height: 502px;
     text-align: center;
@@ -20,7 +21,7 @@
   }
 }
 
-.team-cards {
+.team__list {
   min-width: 418px;
 
   // display: flex;

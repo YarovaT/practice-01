@@ -318,28 +318,8 @@ header {
   position: relative;
 }
 
-hr {
-  border: none;
-  /* Убираем границу */
-  background-color: rgba(157, 164, 189, 0.6);
-  /* Цвет линии */
-  color: rgba(157, 164, 189, 0.6);
-  /* Цвет линии для IE6-7 */
-  height: 1px;
-  /* Толщина линии */
-}
-
 section {
   margin-top: 84px;
-}
-
-.content-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 /* Убираем внешние и внутренние отступы */
@@ -435,7 +415,7 @@ h6 {
 
 /*--------------------*/
 .container {
-  max-width: 480px;
+  min-width: 480px;
   margin: 0 auto;
   padding: 0 31px;
 }
@@ -591,7 +571,6 @@ h6 {
 }
 
 .button {
-  margin: 0 auto;
   display: block;
   width: 160px;
   height: 40px;
@@ -604,22 +583,17 @@ h6 {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #303030;
-  cursor: pointer;
 }
 
 .button:hover, .button:focus {
-  background-color: #ff6c00;
+  outline: none;
+  background: #ff6c00;
   color: #ffffff;
 }
 
 .button__appointment {
   margin-top: 50px;
   color: #ffffff;
-}
-
-.button__content {
-  margin-left: 0;
-  margin-top: 40px;
 }
 
 .contacts .button {
@@ -661,23 +635,20 @@ h6 {
 .hero-section {
   margin-top: -98px;
   min-height: 80vh;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.2))), url("../../images/mobile/slider_1.jpg");
-  background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2)), url("../../images/mobile/slider_1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.2))), url("../../images/mobile/slider_3.jpg") center/cover no-repeat;
+  background: linear-gradient(to right, rgba(25, 28, 38, 0.2)), url("../../images/mobile/slider_3.jpg") center/cover no-repeat;
 }
 
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .hero-section {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.2))), url("../../images/mobile/slider_1@2x.jpg");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2)), url("../../images/mobile/slider_1@2x.jpg");
-  }
-}
-
-.hero-content {
+.hero-section__content {
   margin-top: 208px;
   max-width: 73%;
+}
+
+.hero-section__text {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.62;
+  color: #9da4bd;
 }
 
 .title {
@@ -685,35 +656,34 @@ h6 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   letter-spacing: 0.05em;
-}
-
-.title__section {
-  font-size: 28px;
-  line-height: 1.18;
-  color: #303030;
-}
-
-.title__hero-section {
   font-size: 48px;
-  line-height: 1.33;
+  line-height: 1.17;
+}
+
+.title,
+.price__title,
+.footer__title,
+.contacts__title {
   color: #ffffff;
 }
 
-.title__price-section {
+.price__title,
+.features__title,
+.team__title,
+.footer__title,
+.contacts__title {
   font-size: 42px;
-  line-height: 1.17;
-  color: #ffffff;
 }
 
-.title__features-section {
-  margin-bottom: 20px;
-  font-size: 42px;
-  line-height: 1.17;
+.about__title,
+.features__title,
+.team__title {
   color: #303030;
 }
 
 .subTitle {
-  margin-left: 20px;
+  position: relative;
+  margin-left: 80px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -722,35 +692,24 @@ h6 {
   color: rgba(157, 164, 189, 0.6);
 }
 
-.subTitle:nth-child(odd) {
-  color: #303030;
-}
-
-.dark {
-  color: #303030;
-}
-
-.content-text {
-  margin-top: 20px;
-  line-height: 1.62;
-  color: #9da4bd;
-}
-
-.content-text__base {
-  color: #555555;
-}
-
-.content-text__small {
-  font-size: 14px;
-  line-height: 1.86;
+.subTitle:before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  right: 100%;
+  top: 50%;
+  background-color: rgba(157, 164, 189, 0.6);
+  margin: 0 20px 0 0;
 }
 
 .team {
   padding: 84px 0;
   background: #f7f7f7;
+  color: #303030;
 }
 
-.team__card {
+.team__item {
   margin-bottom: 67px;
   min-height: 502px;
   text-align: center;
@@ -759,20 +718,20 @@ h6 {
           align-items: center;
 }
 
-.team__card-box {
+.team__item-box {
   margin-top: 30px;
 }
 
-.team__card-text {
+.team__item-text {
   padding-top: 8px;
   color: #ff6c00;
 }
 
-.team__card:last-child {
+.team__item:last-child {
   margin-bottom: 0;
 }
 
-.team-cards {
+.team__list {
   min-width: 418px;
 }
 
@@ -835,31 +794,27 @@ h6 {
   color: #ff6c00;
 }
 
-.price-section {
-  background-color: #111319;
-  background-image: url("../../images/mobile/section-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.price {
+  background: url("../../images/mobile/background.png") center/cover no-repeat #111319;
   padding: 84px 0;
 }
 
-.price-section__box {
+.price__box {
   margin-top: 44px;
   padding: 30px;
   background: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
   background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 
-.price-section__list li {
+.price__list li {
   margin-bottom: 20px;
 }
 
-.price-section__list li:last-child {
+.price__list li:last-child {
   margin-bottom: 0;
 }
 
-.price-section__list-item {
+.price__item {
   line-height: 2.14;
   color: #9da4bd;
   display: -webkit-box;
@@ -875,12 +830,12 @@ h6 {
   margin: 0 auto;
 }
 
-.price-section__list-item .type {
+.price__text {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
-.price-section__list-item .price {
+.price__text-count {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -888,7 +843,7 @@ h6 {
       flex-shrink: 0;
 }
 
-.price-section__list-item::after {
+.price__text-count::before {
   content: " ";
   height: 1px;
   background-color: rgba(157, 164, 189, 0.12);
@@ -898,16 +853,23 @@ h6 {
   margin: 0 6px;
 }
 
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .price-section {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(25, 28, 38, 0.2))), url("../../images/mobile/section-bg@2x.png");
-    background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2)), url("../../images/mobile/section-bg@2x.png");
-  }
+.features {
+  font-size: 11px;
+  line-height: 1.36;
 }
 
-.about-content hr {
-  background-color: #303030;
+.features__subTitle {
   color: #303030;
+}
+
+.features__subTitle::before {
+  background-color: #303030;
+}
+
+.features__text {
+  margin: 20px 0 44px 0;
+  font-size: 18px;
+  line-height: 1.67;
 }
 
 .features__list {
@@ -919,59 +881,35 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.features__text {
-  margin-bottom: 44px;
-  font-size: 18px;
-  line-height: 1.67;
-}
-
-.features__item {
-  -ms-flex-preferred-size: calc(100% / 2 - 30px);
-      flex-basis: calc(100% / 2 - 30px);
-  margin: 0 30px 30px 0;
-  min-width: 193px;
-  height: 133px;
-  background: #f7f7f7;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-align: center;
   color: #303030;
 }
 
-.features__item:nth-child(2n) {
-  margin-right: 0;
-  margin-top: 30px;
-  margin-bottom: 0;
-  margin-left: 0;
+.features__item {
+  text-align: center;
+  -ms-flex-preferred-size: calc(100% / 2 - 30px);
+      flex-basis: calc(100% / 2 - 30px);
+  margin: 0 30px 30px 0;
+  padding: 20px 0 20px 0;
+  min-width: 193px;
+  height: 133px;
+  background: #f7f7f7;
 }
 
-.features__item-box {
-  position: relative;
+.features__item:nth-child(2n) {
+  margin: 30px 0 0 0;
 }
 
 .features__item-count {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 42px;
   letter-spacing: 0.05em;
 }
 
-.features__item-plus {
-  position: absolute;
-  top: 5%;
-  right: 25%;
+.features__item-count::after {
+  content: "+";
   font-size: 16px;
   line-height: 1.38;
   color: #ff6c00;
-}
-
-.features hr,
-.team hr,
-.portfolio hr {
-  background-color: #303030;
-  color: #303030;
 }
 
 .social__links {
@@ -1007,5 +945,40 @@ h6 {
 
 .portfolio__cards li:last-child {
   margin-bottom: 0;
+}
+
+.footer {
+  background-color: #191c26;
+}
+
+.about {
+  line-height: 1.62;
+}
+
+.about__subTitle {
+  color: #303030;
+}
+
+.about__subTitle:before {
+  background-color: #303030;
+}
+
+.about__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: 1.18;
+}
+
+.about p {
+  margin-bottom: 20px;
+}
+
+.about__text {
+  font-size: 14px;
+  line-height: 1.86;
+}
+
+.about__button {
+  margin: 40px 0 0 0;
 }
 /*# sourceMappingURL=main.css.map */
