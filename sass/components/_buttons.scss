@@ -12,12 +12,6 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: $title-color;
-  &:hover,
-  &:focus {
-    outline: none;
-    background: #ff6c00;
-    color: #ffffff;
-  }
 
   &__appointment {
     margin-top: 50px;
@@ -29,46 +23,12 @@
   // }
 }
 
+.button:hover,
+.button:focus {
+  background: #ff6c00;
+  color: #ffffff;
+}
+
 .contacts .button {
   margin-top: 24px;
-}
-
-.menu-button {
-  padding: 11px 8px;
-  border: none;
-  fill: currentColor;
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 2;
-
-  // position: absolute;
-  // top: 8px;
-  // right: 8px;
-  // padding: 0;
-
-  &:hover,
-  &:focus {
-    outline: none;
-  }
-
-  @media screen and (min-width: $tablet) {
-    display: none;
-  }
-}
-
-.menu-button .icon-close {
-  display: none;
-}
-
-.menu-button.is-open .icon-close {
-  display: block;
-  z-index: 3;
-}
-
-.menu-button.is-open .icon-menu {
-  // position: absolute;
-  // top: 8px;
-  // right: 8px;
-  // padding: 0;
-  display: none;
 }

@@ -508,6 +508,12 @@ h6 {
           box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.04), -2px 0px 4px rgba(0, 0, 0, 0.08), -1px 0px 3px rgba(0, 0, 0, 0.16);
 }
 
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
+}
+
 .menu-container.is-open {
   display: block;
   z-index: 3;
@@ -528,6 +534,11 @@ h6 {
 .backdrop.is-open {
   opacity: 1;
   pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
 }
 
 .menu-list {
@@ -585,51 +596,19 @@ h6 {
   color: #303030;
 }
 
-.button:hover, .button:focus {
-  outline: none;
-  background: #ff6c00;
-  color: #ffffff;
-}
-
 .button__appointment {
   margin-top: 50px;
   color: #ffffff;
 }
 
+.button:hover,
+.button:focus {
+  background: #ff6c00;
+  color: #ffffff;
+}
+
 .contacts .button {
   margin-top: 24px;
-}
-
-.menu-button {
-  padding: 11px 8px;
-  border: none;
-  fill: currentColor;
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.menu-button:hover, .menu-button:focus {
-  outline: none;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-button {
-    display: none;
-  }
-}
-
-.menu-button .icon-close {
-  display: none;
-}
-
-.menu-button.is-open .icon-close {
-  display: block;
-  z-index: 3;
-}
-
-.menu-button.is-open .icon-menu {
-  display: none;
 }
 
 .hero-section {
@@ -846,6 +825,7 @@ h6 {
 .price__text-count::before {
   content: " ";
   height: 1px;
+  width: 100%;
   background-color: rgba(157, 164, 189, 0.12);
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;

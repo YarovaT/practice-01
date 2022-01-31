@@ -30,15 +30,17 @@
     &-count {
       order: 1;
       flex-shrink: 0;
-      &::before {
-        content: " ";
-        height: 1px;
-        background-color: rgba(157, 164, 189, 0.12);
-        flex-grow: 1;
-        margin: 0 6px;
-      }
     }
   }
+}
+
+.price__text-count::before {
+  content: " ";
+  height: 1px;
+  width: 100%;
+  background-color: rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
+  margin: 0 6px;
 }
 
 // @media screen and (min-device-pixel-ratio: 2),
