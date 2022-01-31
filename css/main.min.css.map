@@ -22,7 +22,8 @@
         "../sass/components/_social-links.scss",
         "../sass/components/_portfolio.scss",
         "../sass/components/_footer.scss",
-        "../sass/components/_about.scss"
+        "../sass/components/_about.scss",
+        "../sass/components/_dropDown-menu.scss"
     ],
     "names": [],
     "file": "main.min.css"
